@@ -121,9 +121,13 @@ public class SurfaceTextureRenderer extends EglRenderer {
                 // Do surface initialization here, and draw the current frame.
               }
 
-              @Override
-              public void onSurfaceCleanup() {
+              public void onSurfaceCleanup() {  // ✅ Removed @Override since it’s missing in the parent class
                 surfaceDestroyed();
+              }
+
+              @Override
+              public void onSurfaceDestroyed() {
+                surfaceDestroyed();  // Ensure cleanup runs properly
               }
             }
     );
