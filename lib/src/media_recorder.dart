@@ -16,7 +16,7 @@ class MediaRecorder extends rtc.MediaRecorder {
 
    //Modified the above 2 lines to this
   @override
-  Future stop({bool force = false}) => _delegate.stop(force: force);
+  Future stop({String? albumName}) => _delegate.stop(albumName: albumName);
 
   @override
   void startWeb(
