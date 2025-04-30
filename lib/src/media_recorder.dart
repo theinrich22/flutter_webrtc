@@ -11,12 +11,12 @@ class MediaRecorder extends rtc.MediaRecorder {
           {MediaStreamTrack? videoTrack, RecorderAudioChannel? audioChannel}) =>
       _delegate.start(path, videoTrack: videoTrack, audioChannel: audioChannel);
 
-//  @override
-//  Future stop() => _delegate.stop();
+  @override
+  Future stop() => _delegate.stop();
 
    //Modified the above 2 lines to this
-  @override
-  Future stop({String? albumName}) => _delegate.stop(albumName: albumName);
+//  @override
+//  Future stop({String? albumName}) => _delegate.stop(albumName: albumName);
 
   @override
   void startWeb(
